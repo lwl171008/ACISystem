@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+        <ImageView
+
+            android:src="@drawable/select"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="45dp" />
+        <EditText
+            android:gravity="center_horizontal"
+            android:hint="请输入活动名称"
+            android:id="@+id/Title"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="45dp" />
+        <Button
+            android:id="@+id/sousuo"
+            android:textSize="25dp"
+            android:background="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.5"
+            android:text="搜索"/>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="#99eded"
+        app:cardCornerRadius="45dp"
+        app:cardElevation="19dp"
+        app:cardMaxElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:hint="标题栏"
+                android:textColor="#060606"
+                android:id="@+id/AcName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="30dp"/>
+            <TextView
+                android:hint="内容"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/AcName"
+                android:id="@+id/AcCon"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.qmuiteam.qmui.layout.QMUIButton
+                android:layout_centerHorizontal="true"
+                android:id="@+id/Baoming"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:background="#61f2ae"
+                android:textSize="19dp"
+                android:gravity="center"
+                android:text="报名"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

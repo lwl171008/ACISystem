@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:background="@drawable/myschool"
+        android:id="@+id/AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/MyVp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <android.support.v7.widget.Toolbar
+                android:background="#8abcec"
+                android:id="@+id/MyToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:layout_collapseMode="pin">
+
+                <LinearLayout
+
+
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.qmuiteam.qmui.layout.QMUIButton
+
+                        android:id="@+id/Home"
+                        android:textColor="#fa0606"
+                        android:textSize="16dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="首页"/>
+                    <com.qmuiteam.qmui.layout.QMUIButton
+                        android:id="@+id/Select"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="活动查询"/>
+                    <com.qmuiteam.qmui.layout.QMUIButton
+                        android:id="@+id/MyAction"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="我的活动"/>
+                    <com.qmuiteam.qmui.layout.QMUIButton
+                        android:id="@+id/Admin"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="管理员入口"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:fillViewport="true"
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+        <com.example.sion.myapplication.Adapter.WrapViewPage
+            android:id="@+id/MyViewPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

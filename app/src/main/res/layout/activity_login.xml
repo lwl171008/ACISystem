@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+    <android.support.v7.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="920dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="#ecf27be4"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="20dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="欢迎登陆"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:textColor="@color/btn_filled_blue_bg_disabled"/>
+
+            <FrameLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:elevation="200dp"
+                        android:layout_above="@id/Button"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/SLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="登陆"/>
+                        <Button
+                            android:id="@+id/SReg"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注册"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Button"
+                        android:layout_alignParentBottom="true"
+                        android:elevation="200dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/Student"
+                            android:text="学生入口"
+                            android:textSize="30dp"
+                            android:textColor="#f40606"
+                            android:background="#aeaeea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            />
+                        <Button
+                            android:id="@+id/Teacher"
+                            android:layout_marginLeft="30dp"
+                            android:text="老师入口"
+                            android:textSize="30dp"
+                            android:textColor="#fff"
+                            android:background="#aeaeea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            />
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/S"
+                        android:visibility="visible"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="30dp"
+                        app:cardBackgroundColor="#4ab9de"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="30dp"
+                                android:text="学生登陆"
+                                android:textSize="25dp"
+                                android:textColor="#d22d77"/>
+                            <LinearLayout
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="25dp"
+                                        android:text="学号："/>
+                                    <EditText
+                                        android:layout_marginRight="30dp"
+                                        android:inputType="number"
+                                        android:gravity="center"
+                                        android:id="@+id/Suser"
+                                        android:maxLines="1"
+                                        android:textSize="20dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="请输入学号"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="50dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="25dp"
+                                        android:text="密码："/>
+                                    <EditText
+                                        android:layout_marginRight="30dp"
+
+                                        android:gravity="center"
+                                        android:id="@+id/Spsw"
+                                        android:textSize="20dp"
+                                        android:maxLines="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="请输入密码"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/T"
+                        android:visibility="gone"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="30dp"
+                        app:cardBackgroundColor="#3f88e7"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:text="老师登陆"
+                            android:textSize="25dp"
+                            android:textColor="#d22d77"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="25dp"
+                                        android:text="学号："/>
+                                    <EditText
+                                        android:layout_marginRight="30dp"
+
+                                        android:gravity="center"
+                                        android:id="@+id/Tuser"
+                                        android:maxLines="1"
+                                        android:textSize="20dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="请输入教师账号"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginTop="50dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="25dp"
+                                        android:text="密码："/>
+                                    <EditText
+                                        android:layout_marginRight="30dp"
+
+                                        android:gravity="center"
+                                        android:id="@+id/Tpsw"
+                                        android:textSize="20dp"
+                                        android:maxLines="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="请输入密码"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
