@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="65dp"
-    android:background="#defaff"
+   android:background="#defaff"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:background="#e1ed5b"
@@ -13,28 +13,28 @@
         android:gravity="center"
         android:textSize="20dp"
         android:text="100"/>
-    <TextView
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@id/MyID"
-        android:id="@+id/ActionName"
-        android:gravity="left|center_vertical"
-        android:textSize="15dp"
-        android:text="人生地不熟不不不不不"
-        android:layout_width="120dp"
-        android:layout_height="46dp"
-        />
+<TextView
+    android:layout_marginLeft="30dp"
+   android:layout_toRightOf="@id/MyID"
+    android:id="@+id/ActionName"
+    android:gravity="left|center_vertical"
+    android:textSize="15dp"
+    android:text="人生地不熟不不不不不"
+    android:layout_width="120dp"
+    android:layout_height="46dp"
+    />
     <TextView
         android:layout_alignLeft="@id/ActionName"
-        android:layout_below="@id/ActionName"
-        android:id="@+id/Tp"
-        android:textColor="#fd094e"
+       android:layout_below="@id/ActionName"
+       android:id="@+id/Tp"
+       android:textColor="#fd094e"
         android:layout_centerVertical="true"
         android:text="报名人数："
         android:maxLength="8"
         android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+      />
     <TextView
         android:layout_toRightOf="@id/Tp"
         android:layout_below="@id/ActionName"
@@ -47,51 +47,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-    <LinearLayout
-        android:layout_margin="5dp"
+      <LinearLayout
+          android:layout_margin="5dp"
 
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="right|center_vertical">
-        <com.qmuiteam.qmui.layout.QMUIButton
-            android:id="@+id/Join"
-            android:textColor="#ffff"
-            android:layout_alignParentRight="true"
-            android:background="#89c9ec"
-            android:text="报名"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
-        <LinearLayout
+          android:layout_alignParentRight="true"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="right|center_vertical">
+          <com.qmuiteam.qmui.layout.QMUIButton
+              android:id="@+id/Join"
+             android:textColor="#ffff"
+              android:layout_alignParentRight="true"
+              android:background="#89c9ec"
+              android:text="报名"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              />
+          <LinearLayout
 
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-            <TextView
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+              <TextView
 
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="剩余人数："
+                  android:gravity="center"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="剩余人数："
 
-                android:background="#89c9ec"/>
-            <TextView
-                android:id="@+id/Residue"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="100"
-                android:textColor="#f93f3f"
-                android:background="#89c9ec"/>
-        </LinearLayout>
+                  android:background="#89c9ec"/>
+              <TextView
+                  android:id="@+id/Residue"
+                  android:gravity="center"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="100"
+                  android:textColor="#f93f3f"
+                  android:background="#89c9ec"/>
+          </LinearLayout>
 
-    </LinearLayout>
+      </LinearLayout>
 
 </RelativeLayout>

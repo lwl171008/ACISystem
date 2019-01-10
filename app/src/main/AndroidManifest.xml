@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.along.acisystem">
+    package="com.example.sion.myapplication">
 
     <application
         android:allowBackup="true"
@@ -9,36 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name="com.example.Adapter.MyRecyviewAdapter" />
-        <activity android:name="com.example.Adapter.MyRecyviewAdapter02" />
-        <activity android:name="com.example.Adapter.RyLine" />
-        <activity android:name="com.example.Adapter.TabFragmentPageAdapter" />
-        <activity android:name="com.example.Adapter.WrapViewPage" />
-        <activity android:name="com.example.EmptyClass.Action1" />
-        <activity android:name="com.example.EmptyClass.Action2" />
-        <activity android:name="com.example.EmptyClass.Admin" />
-        <activity android:name="com.example.EmptyClass.Student" />
-        <activity android:name="com.example.EmptyClass.UserRegister" />
-        <activity android:name="com.example.Fragments.Fragments01" />
-        <activity android:name="com.example.Fragments.Fragments02" />
-        <activity android:name="com.example.Fragments.Fragments03" />
-        <activity android:name="com.example.Fragments.Fragments04" />
-        <activity android:name="com.example.MyServer.AdminServer" />
-        <activity android:name="com.example.MyServer.AdminServerImp" />
-        <activity android:name="com.example.MyServer.StudentServer" />
-        <activity android:name="com.example.MyServer.StudentServerImp" />
-        <activity android:name="com.example.MySQLite.SQLHelper" />
-        <activity android:name="com.example.Until.ReadyDate" />
-        <activity android:name="com.example.ViewHolders.HomeViewHolder" />
-        <activity android:name="com.example.ViewHolders.MyActionitem"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

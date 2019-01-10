@@ -27,18 +27,18 @@ public class WrapViewPage extends ViewPager {
         int dealtX = 0; int dealtY = 0;
         switch (ev.getAction())
         { case MotionEvent.ACTION_DOWN: dealtX = 0; dealtY = 0; // 保证子View能够接收到Action_move事件
-            getParent().requestDisallowInterceptTouchEvent(true);
-            break;
-            case MotionEvent.ACTION_MOVE: dealtX += Math.abs(x - lastX);
-                dealtY += Math.abs(y - lastY);  // 这里是否拦截的判断依据是左右滑动，读者可根据自己的逻辑进行是否拦截
-                if (dealtX >= dealtY) { // 左右滑动请求父 View 不要拦截
-                    getParent().requestDisallowInterceptTouchEvent(true);
-                }else { getParent().requestDisallowInterceptTouchEvent(false);
-                }
-                lastX = x; lastY = y;
-                break;
-            case MotionEvent.ACTION_CANCEL: break;
-            case MotionEvent.ACTION_UP: break;
+        getParent().requestDisallowInterceptTouchEvent(true);
+        break;
+        case MotionEvent.ACTION_MOVE: dealtX += Math.abs(x - lastX);
+        dealtY += Math.abs(y - lastY);  // 这里是否拦截的判断依据是左右滑动，读者可根据自己的逻辑进行是否拦截
+         if (dealtX >= dealtY) { // 左右滑动请求父 View 不要拦截
+              getParent().requestDisallowInterceptTouchEvent(true);
+         }else { getParent().requestDisallowInterceptTouchEvent(false);
+         }
+         lastX = x; lastY = y;
+         break;
+         case MotionEvent.ACTION_CANCEL: break;
+         case MotionEvent.ACTION_UP: break;
         }
         return super.dispatchTouchEvent(ev); }
 

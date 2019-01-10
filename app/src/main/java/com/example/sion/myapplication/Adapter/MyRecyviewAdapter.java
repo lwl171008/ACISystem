@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyRecyviewAdapter extends RecyclerView.Adapter<HomeViewHolder> {
+    String name=null;
     StudentServer studentServer;
     List<Action1> actionMsgs;
     String StudentName;
@@ -55,6 +56,7 @@ public class MyRecyviewAdapter extends RecyclerView.Adapter<HomeViewHolder> {
                     actionMsgs = studentServer.StudentAction();
                     notifyDataSetChanged();
                 }
+
             }
         });
     }

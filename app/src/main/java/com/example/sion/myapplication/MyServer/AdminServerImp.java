@@ -11,7 +11,7 @@ import com.example.sion.myapplication.EmptyClass.Admin;
 import com.example.sion.myapplication.EmptyClass.UserRegisetr;
 import com.example.sion.myapplication.Until.ReadyDate;
 
-public class AdminServerImp implements com.example.sion.myapplication.MyServer.AdminServer {
+public class AdminServerImp implements AdminServer {
     Context context;
     SQLiteDatabase myData;
     public AdminServerImp(Context context) {
@@ -20,7 +20,7 @@ public class AdminServerImp implements com.example.sion.myapplication.MyServer.A
 
     @Override
     public int AdminRegister(UserRegisetr admin) {
-        myData = ReadyDate.GetWrite(context, "MyData");
+         myData = ReadyDate.GetWrite(context, "MyData");
         ContentValues contentValues=new ContentValues();
         contentValues.put("num",admin.getUser());
         contentValues.put("psw",admin.getPsw());
@@ -49,34 +49,34 @@ public class AdminServerImp implements com.example.sion.myapplication.MyServer.A
 
     @Override
     public int AdminAdd(Action1 action1) {
-        try {
-            myData = ReadyDate.GetWrite(context, "MyData");
-            ContentValues contentValues=new ContentValues();
-            contentValues.put("Aname",action1.getAname());
-            contentValues.put("AContext",action1.getAContext());
-            contentValues.put("people",Integer.valueOf(action1.getPeople()));
-            long student1 = myData.insert("Action1", null, contentValues);
-            return (int) student1;
-        }catch (Exception e){
-            Log.i("AdminAdd", e.toString());
-            return -1;
-        }
+   try {
+       myData = ReadyDate.GetWrite(context, "MyData");
+       ContentValues contentValues=new ContentValues();
+       contentValues.put("Aname",action1.getAname());
+       contentValues.put("AContext",action1.getAContext());
+       contentValues.put("people",Integer.valueOf(action1.getPeople()));
+       long student1 = myData.insert("Action1", null, contentValues);
+       return (int) student1;
+   }catch (Exception e){
+       Log.i("AdminAdd", e.toString());
+       return -1;
+   }
 
     }
 
     @Override
     public int DeleteAdd(String Aname) {
-        try {
-            String Where="Aname=?";
-            myData=ReadyDate.GetWrite(context,"MyData");
-            String[] objects={Aname};
-            int action1 = myData.delete("Action1", Where, objects);
-            return action1;
-        }catch (Exception e){
-            return -1;
-        }finally {
-            myData.close();
-        }
+       try {
+           String Where="Aname=?";
+           myData=ReadyDate.GetWrite(context,"MyData");
+           String[] objects={Aname};
+           int action1 = myData.delete("Action1", Where, objects);
+           return action1;
+       }catch (Exception e){
+           return -1;
+       }finally {
+           myData.close();
+       }
 
     }
 

@@ -80,8 +80,8 @@ public class Fragment04 extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.Fabu:
-                String name=Atitile.getText()+"";
-                String People=APeople.getText()+"";
+               String name=Atitile.getText()+"";
+               String People=APeople.getText()+"";
                 String Context=AContext.getText()+"";
                 if (name.equals("")||People.equals("")||Context.equals("")){
                     Toast.makeText(context,"请不要留空",Toast.LENGTH_SHORT).show();
@@ -104,7 +104,7 @@ public class Fragment04 extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.deleteBt:
-                String Ti= DeleteTitle.getText()+"";
+               String Ti= DeleteTitle.getText()+"";
                 if(Ti.equals("")){
                     Toast.makeText(context,"请不要留空",Toast.LENGTH_SHORT).show();
 

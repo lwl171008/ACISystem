@@ -15,7 +15,7 @@ import com.example.sion.myapplication.Until.ReadyDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentServerImp implements com.example.sion.myapplication.MyServer.StudentServer {
+public class StudentServerImp implements StudentServer {
     Context context;
     SQLiteDatabase myData ;
     public StudentServerImp(Context context) {
@@ -43,7 +43,7 @@ public class StudentServerImp implements com.example.sion.myapplication.MyServer
     public int StudentRegister(UserRegisetr student) {
         try{
             Log.i("StudentRegister", "StudentRegister: ");
-            myData = ReadyDate.GetWrite(context, "MyData");
+             myData = ReadyDate.GetWrite(context, "MyData");
             ContentValues contentValues=new ContentValues();
             contentValues.put("num",student.getUser());
             contentValues.put("psw",student.getPsw());
@@ -166,7 +166,7 @@ public class StudentServerImp implements com.example.sion.myapplication.MyServer
             String[] ms={AName};
             String sql="delete from Action2 where Aname=? and SName=?";
             Action1 check = Check(AName);
-            int  jiayi=Integer.valueOf( check.getJpeople());
+          int  jiayi=Integer.valueOf( check.getJpeople());
             myData=ReadyDate.GetWrite(context,"MyData");
             ContentValues contentValues2 = new ContentValues();
             contentValues2.put("Jpeople", jiayi-1);

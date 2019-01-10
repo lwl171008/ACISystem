@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.SLogin:
                 if(St==0){
-                    String user= Suser.getText()+"";
+                   String user= Suser.getText()+"";
                     String psw= Spsw.getText()+"";
                     if(user.equals("")||psw.equals("")){
                         Toast.makeText(this,"请不要留空",Toast.LENGTH_SHORT).show();
@@ -104,39 +104,39 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
                     }
 
-                    //学生登陆
+                      //学生登陆
 
                 }
-                if(Tt==0){
+                  if(Tt==0){
                     //老师登陆
-                    String user= Tuser.getText()+"";
-                    String psw= Tpsw.getText()+"";
-                    if(user.equals("")||psw.equals("")){
-                        Toast.makeText(this,"请不要留空",Toast.LENGTH_SHORT).show();
-                    }else {
-                        try{
-                            Integer integer = Integer.valueOf(user);
-                            String s = adminServer.AdminLogin(new Admin(integer, psw));
-                            if(s!=null){
-                                Toast.makeText(this,"登陆成功",Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                                intent.putExtra("Name",s);
-                                intent.putExtra("Body",1);
-                                startActivity(intent);
+                      String user= Tuser.getText()+"";
+                      String psw= Tpsw.getText()+"";
+                      if(user.equals("")||psw.equals("")){
+                          Toast.makeText(this,"请不要留空",Toast.LENGTH_SHORT).show();
+                      }else {
+                          try{
+                              Integer integer = Integer.valueOf(user);
+                              String s = adminServer.AdminLogin(new Admin(integer, psw));
+                              if(s!=null){
+                                  Toast.makeText(this,"登陆成功",Toast.LENGTH_SHORT).show();
+                                  Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                                  intent.putExtra("Name",s);
+                                  intent.putExtra("Body",1);
+                                  startActivity(intent);
 
-                            }else {
-                                Toast.makeText(this,"账号或者密码错误",Toast.LENGTH_SHORT).show();
-                            }
-                        }catch (Exception e){
-                            Toast.makeText(this,"请输入学号",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
+                              }else {
+                                  Toast.makeText(this,"账号或者密码错误",Toast.LENGTH_SHORT).show();
+                              }
+                          }catch (Exception e){
+                              Toast.makeText(this,"请输入学号",Toast.LENGTH_SHORT).show();
+                          }
+                      }
+                  }
                 break;
             case R.id.SReg:
                 if(St==0){
                     //学生注册
-                    showDlog(0);
+              showDlog(0);
 
                 }
                 if(Tt==0){
@@ -171,7 +171,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         student.setView(inflate[0]);
-        final EditText viewById2 = inflate[0].findViewById(R.id.myuser);
+       final EditText viewById2 = inflate[0].findViewById(R.id.myuser);
         final  EditText viewById1 = inflate[0].findViewById(R.id.mypsw);
         final  EditText viewById = inflate[0].findViewById(R.id.twopsw);
         final  EditText viewById3 = inflate[0].findViewById(R.id.name);
@@ -224,23 +224,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public synchronized void Jonp(UserRegisetr userRegisetr,int sa){
 
-        if(sa==0&&userRegisetr!=null){
-            int i = studentServer.StudentRegister(userRegisetr);
+       if(sa==0&&userRegisetr!=null){
+               int i = studentServer.StudentRegister(userRegisetr);
             if(i!=-1){
                 Toast.makeText(LoginActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(LoginActivity.this,"学生用户已经存在",Toast.LENGTH_SHORT).show();
             }
-        }else if(sa==1&&userRegisetr!=null){
-            int i = adminServer.AdminRegister(userRegisetr);
-            if(i!=-1){
-                Toast.makeText(LoginActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(LoginActivity.this,"老师用户已经存在",Toast.LENGTH_SHORT).show();
+       }else if(sa==1&&userRegisetr!=null){
+           int i = adminServer.AdminRegister(userRegisetr);
+           if(i!=-1){
+               Toast.makeText(LoginActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+           }else {
+               Toast.makeText(LoginActivity.this,"老师用户已经存在",Toast.LENGTH_SHORT).show();
 
-            }
-        }else {
+           }
+       }else {
 
-        }
+       }
     }
 }

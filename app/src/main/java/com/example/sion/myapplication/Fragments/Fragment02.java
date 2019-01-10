@@ -50,7 +50,7 @@ public class Fragment02 extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
-
+        
         Title = (EditText) view.findViewById(R.id.Title);
         sousuo = (Button) view.findViewById(R.id.sousuo);
         AcName = (TextView) view.findViewById(R.id.AcName);
@@ -71,10 +71,10 @@ public class Fragment02 extends Fragment implements View.OnClickListener {
                 if(Titles.equals("")){
                     Toast.makeText(context,"请不要留空",Toast.LENGTH_SHORT).show();
                 }else {
-                    action1 = studentServer.StudentActionSelect(Titles);
+                     action1 = studentServer.StudentActionSelect(Titles);
                     if(action1!=null){
-                        AcName.setText(action1.getAname());
-                        AcCon.setText(action1.getAContext());}
+                    AcName.setText(action1.getAname());
+                    AcCon.setText(action1.getAContext());}
                     else {
                         Toast.makeText(context,"查询不到",Toast.LENGTH_SHORT).show();
                     }
@@ -89,13 +89,13 @@ public class Fragment02 extends Fragment implements View.OnClickListener {
                 if (titile.equals("")){
                     Toast.makeText(context,"请查询",Toast.LENGTH_SHORT).show();
                 }else {
-                    int join = studentServer.Join(action1.getAname(), Name);
-                    if(join!=-1){
-                        Toast.makeText(context,"报名成功",Toast.LENGTH_SHORT).show();
+                int join = studentServer.Join(action1.getAname(), Name);
+                if(join!=-1){
+                    Toast.makeText(context,"报名成功",Toast.LENGTH_SHORT).show();
 
-                    }else {
-                        Toast.makeText(context,"报名失败",Toast.LENGTH_SHORT).show();
-                    }}
+                }else {
+                    Toast.makeText(context,"报名失败",Toast.LENGTH_SHORT).show();
+                }}
                 break;
 
         }

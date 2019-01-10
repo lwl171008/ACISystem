@@ -10,9 +10,9 @@
         android:text="全部活动"
         android:textSize="35dp"
         android:layout_marginBottom="28dp"
-        android:textColor="@android:color/holo_red_dark"/>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/MyRV"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:textColor="@color/qmui_s_switch_text_color"/>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/MyRV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 </LinearLayout>

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
         name = intent.getStringExtra("Name");
-        body = intent.getIntExtra("Body", 0);
+         body = intent.getIntExtra("Body", 0);
         initView();
 
         Log.i("MyName", name+body);

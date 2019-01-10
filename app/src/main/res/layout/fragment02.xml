@@ -31,51 +31,51 @@
             android:layout_weight="1.5"
             android:text="搜索"/>
     </LinearLayout>
-    <android.support.v7.widget.CardView
-        android:layout_centerInParent="true"
+<android.support.v7.widget.CardView
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    app:cardBackgroundColor="#99eded"
+    app:cardCornerRadius="45dp"
+    app:cardElevation="19dp"
+    app:cardMaxElevation="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:cardBackgroundColor="#99eded"
-        app:cardCornerRadius="45dp"
-        app:cardElevation="19dp"
-        app:cardMaxElevation="10dp"
-        app:cardUseCompatPadding="true"
-        app:cardPreventCornerOverlap="true"
-        >
-        <RelativeLayout
+        android:layout_height="match_parent">
+        <TextView
+            android:hint="标题栏"
+            android:textColor="#060606"
+            android:id="@+id/AcName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:hint="标题栏"
-                android:textColor="#060606"
-                android:id="@+id/AcName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="30dp"/>
-            <TextView
-                android:hint="内容"
-                android:layout_marginTop="50dp"
-                android:layout_below="@id/AcName"
-                android:id="@+id/AcCon"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <com.qmuiteam.qmui.layout.QMUIButton
-                android:layout_centerHorizontal="true"
-                android:id="@+id/Baoming"
-                android:layout_alignParentBottom="true"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="30dp"
-                android:background="#61f2ae"
-                android:textSize="19dp"
-                android:gravity="center"
-                android:text="报名"/>
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"/>
+        <TextView
+            android:hint="内容"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/AcName"
+            android:id="@+id/AcCon"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.qmuiteam.qmui.layout.QMUIButton
+            android:layout_centerHorizontal="true"
+            android:id="@+id/Baoming"
+           android:layout_alignParentBottom="true"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="#61f2ae"
+            android:textSize="19dp"
+            android:gravity="center"
+            android:text="报名"/>
 
 
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
 </RelativeLayout>
